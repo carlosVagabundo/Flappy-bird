@@ -1,0 +1,13 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #87CEEB; /* Azul claro para o céu */
+}
+
+#gameCanvas {
+    border: 2px solid #000;
+    background-color: #ADD8E6; /* Um tom mais claro para o fundo do jogo */
+}

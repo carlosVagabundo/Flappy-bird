@@ -1,7 +1,6 @@
 const canvas = document.getElementById('gameCanvas');
 const ctx = canvas.getContext('2d');
 
-
 let birdX = 50;
 let birdY = 200;
 let birdVelocity = 0;
@@ -11,11 +10,9 @@ let pipeArray = [];
 let score = 0;
 let gameInterval;
 
-
 const pipeWidth = 50;
 const pipeGap = 150;
 const minPipeHeight = 50;
-
 
 const birdImg = new Image();
 birdImg.src = 'bird.png'; 
@@ -114,7 +111,7 @@ function gameOver() {
     canvas.addEventListener('touchstart', startGame);
 }
 
-// Event listeners para controlar o pássaro
+
 document.addEventListener('keydown', (e) => {
     if (e.code === 'Space') {
         flap();
@@ -123,5 +120,5 @@ document.addEventListener('keydown', (e) => {
 canvas.addEventListener('click', flap);
 canvas.addEventListener('touchstart', flap);
 
-// Inicia o jogo
+
 startGame();

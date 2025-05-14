@@ -4,10 +4,80 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #87CEEB; /* Azul claro para o céu */
+    background: linear-gradient(to bottom, #87CEEB, #ADD8E6); /* Gradiente suave de azul */
+    font-family: sans-serif; 
+}
+
+#gameContainer {
+    background-color: #F0E68C; 
+    border: 5px solid #D2B48C; 
+    border-radius: 10px; 
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); 
+    overflow: hidden; 
+    position: relative; 
 }
 
 #gameCanvas {
-    border: 2px solid #000;
-    background-color: #ADD8E6; /* Um tom mais claro para o fundo do jogo */
+    display: block; 
 }
+
+.score-container {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(255, 255, 255, 0.7); /* Fundo semi-transparente para a pontuação */
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+}
+
+.game-over-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo preto semi-transparente */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0s linear 0.3s; /* Transição suave para aparecer */
+}
+
+.game-over-overlay.active {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease-in-out, visibility 0s linear 0s; /* Transição suave para desaparecer */
+}
+
+.game-over-overlay p {
+    font-size: 1em;
+    font-weight: normal;
+    margin-top: 10px;
+}
+
+.restart-button {
+    background-color: #4CAF50; /* Verde chamativo */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.restart-button:hover {
+    background-color: #45a049;
+}
+
